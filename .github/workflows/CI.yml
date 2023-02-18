@@ -42,7 +42,7 @@ jobs:
     - name: Set version in all AssemblyInfo.cs files
       uses: secondbounce/assemblyinfo-update@v2
       with:
-        version: '$GITVERSION_SEMVER'
+        version: '$GITVERSION_ASSEMBLYSEMVER'
     
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.5
@@ -56,7 +56,7 @@ jobs:
         dotnet-version: 7.x.x
 
     - name: Build
-      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG -p:Version=$GITVERSION_SEMVER --no-restore
+      run: dotnet build $SOLUTION --configuration $BUILD_CONFIG -p:Version=$GITVERSION_ASSEMBLYSEMVER --no-restore
 
     - name: Run tests
       run: dotnet test /p:Configuration=$BUILD_CONFIG --no-restore --no-build --verbosity normal
