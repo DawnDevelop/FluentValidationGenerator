@@ -1,0 +1,7 @@
+﻿{% for p in Properties -%} 
+{% if p.Required == true -%}
+{% if p.Nullable == false -%}
+	RuleFor(t => t.{{ p.Name }}).NotEmpty().WithMessage("{{ p.Name }} Can not be Empty"); 
+{% endif -%}
+{% endif -%}
+{% endfor -%}

@@ -1,8 +1,10 @@
 ﻿using System.Reflection;
+using Generator.Core.Interfaces;
+using Generator.Core.Parse;
 
 namespace Generator.Core;
 
-public class Generator
+public class Generator : IGenerator
 {
 
     public Assembly Assembly { get; }
@@ -19,7 +21,6 @@ public class Generator
     {
         var parsedTemplates = LiquidParser.ParseLiquidTemplate(Assembly);
 
-        var test = parsedTemplates.First().Value;
         foreach (var item in parsedTemplates)
         {
             foreach (var file in
