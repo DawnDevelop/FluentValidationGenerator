@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <metadata>
-	  <readme>readme.md</readme>
+	    <readme>readme.md</readme>
         <id>FleuntValidatorGenerator.Generator.Core</id>
         <version>$version$</version>
         <authors>Deniz Joecks</authors>
@@ -13,6 +13,6 @@
         <repository type="git" url="https://github.com/DawnDevelop/FluentValidatorGenerator.git"/>
     </metadata>
 	<files>
-		<file src="..\..\README.md" target="\" />
+		<file src="..\..\README.md" target="readme.md" />
 	</files>
 </package>
