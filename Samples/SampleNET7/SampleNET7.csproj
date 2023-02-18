@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Generator.Core\Generator.Core.csproj" />
+    <ProjectReference Include="..\..\src\FluentValidationGenerator.Core\FluentValidationGenerator.Core.csproj" />
     <ProjectReference Include="..\SampleNET7.Application\SampleNET7.Application.csproj" />
   </ItemGroup>
 

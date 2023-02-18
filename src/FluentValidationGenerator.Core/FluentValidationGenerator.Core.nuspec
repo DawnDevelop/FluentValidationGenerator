@@ -2,15 +2,15 @@
 <package>
     <metadata>
 	    <readme>readme.md</readme>
-        <id>FleuntValidatorGenerator.Generator.Core</id>
+        <id>FluentValidationGenerator.Core</id>
         <version>$version$</version>
         <authors>Deniz Joecks</authors>
         <description>FleuntValidatorGenerator: A Generation Tool that automatically Generates FleuntValidators based on MediatR commands</description>
         <tags>AspNet CleanArchitecture MediatR Documentation CodeGen CSharp</tags>
-        <projectUrl> https://github.com/DawnDevelop/FluentValidatorGenerator.git </projectUrl>
+        <projectUrl> https://github.com/DawnDevelop/FluentValidationGenerator.git </projectUrl>
         <license type="expression">MIT</license>
         
-        <repository type="git" url="https://github.com/DawnDevelop/FluentValidatorGenerator.git"/>
+        <repository type="git" url="https://github.com/DawnDevelop/FluentValidationGenerator.git"/>
     </metadata>
 	<files>
 		<file src="..\..\README.md" target="readme.md" />

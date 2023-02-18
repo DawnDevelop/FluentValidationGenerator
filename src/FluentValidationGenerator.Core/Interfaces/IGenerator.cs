@@ -1,4 +1,4 @@
-﻿namespace Generator.Core.Interfaces;
+﻿namespace FluentValidationGenerator.Core.Interfaces;
 
 public interface IGenerator
 {

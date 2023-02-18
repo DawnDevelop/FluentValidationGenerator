@@ -1,8 +1,8 @@
 ﻿using System.Reflection;
-using Generator.Core.Interfaces;
-using Generator.Core.Parse;
+using FluentValidationGenerator.Core.Interfaces;
+using FluentValidationGenerator.Core.Parser;
 
-namespace Generator.Core;
+namespace FluentValidationGenerator.Core;
 
 public class Generator : IGenerator
 {

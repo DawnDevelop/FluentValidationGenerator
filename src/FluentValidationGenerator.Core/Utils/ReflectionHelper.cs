@@ -1,9 +1,9 @@
-﻿using Generator.Core.Models;
+﻿using FluentValidationGenerator.Core.Models;
 using MediatR;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace Generator.Core.Utils;
+namespace FluentValidationGenerator.Core.Utils;
 
 public static class ReflectionHelper
 {
@@ -36,7 +36,7 @@ public static class ReflectionHelper
 
     private static bool IsNullable(PropertyInfo property)
     {
-        return property.PropertyType.IsGenericType 
+        return property.PropertyType.IsGenericType
             && property.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>);
     }
     private static bool IsRequired(PropertyInfo property)

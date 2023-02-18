@@ -1,10 +1,10 @@
 ﻿using DotLiquid;
 using DotLiquid.FileSystems;
-using Generator.Core.Models;
-using Generator.Core.Utils;
+using FluentValidationGenerator.Core.Utils;
+using FluentValidationGenerator.Core.Models;
 using System.Reflection;
 
-namespace Generator.Core.Parse;
+namespace FluentValidationGenerator.Core.Parser;
 
 public static class LiquidParser
 {
@@ -20,9 +20,9 @@ public static class LiquidParser
         var models = ReflectionHelper.CreateModelsFromTypes(types);
 
         var result = new Dictionary<string, string>();
-        
-        
-        
+
+
+
         foreach (var model in models)
         {
             try
@@ -44,9 +44,9 @@ public static class LiquidParser
     {
         var assembly = typeof(LiquidParser).Assembly;
         var root = $"{assembly.GetName().Name}.{TemplateFolder}";
-        
+
         Template.FileSystem = new EmbeddedFileSystem(assembly, root);
-        
+
         using Stream stream = assembly.GetManifestResourceStream($"{root}.{TemplateFile}")!;
 
         if (stream != null)
