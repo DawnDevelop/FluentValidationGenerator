@@ -4,7 +4,7 @@ using SampleNET7.Application.Messages.Commands;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var generator = new FluentValidationGenerator.Core.Generator(
+var generator = new FluentValidationGenerator.Generator(
 	typeof(CreateWeatherForecastCommand).Assembly,
 	Path.GetDirectoryName(
 		Path.GetDirectoryName(

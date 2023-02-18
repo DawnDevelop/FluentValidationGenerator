@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net7.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<AssemblyName>FluentValidationGenerator.Core</AssemblyName>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Description>
+			FluentValidatorGenerator: A Code Generation Tool that automatically Generates FleuntValidators based on MediatR commands
+		</Description>
+		<LangVersion>11</LangVersion>
+		<Authors>Deniz Joecks</Authors>
+		<PackageId>FluentValidationGenerator.Core</PackageId>
+		<PackageTags>Documentation AspNetCore NetCore CleanArchitecture CodeGen Fluent Validation Generator MediatR </PackageTags>
+		<Copyright>Copyright ©2023 Deniz Joecks</Copyright>
+		<PackageProjectUrl>https://github.com/DawnDevelop/FluentValidationGenerator.git</PackageProjectUrl>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryBranch>main</RepositoryBranch>
+		<DebugType>Embedded</DebugType>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DotLiquid" Version="2.2.677" />
+		<PackageReference Include="MediatR" Version="12.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Templates\*.liquid" />
+	</ItemGroup>
+</Project>

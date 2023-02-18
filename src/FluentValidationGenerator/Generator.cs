@@ -1,14 +1,17 @@
 ﻿using System.Reflection;
-using FluentValidationGenerator.Core.Interfaces;
-using FluentValidationGenerator.Core.Parser;
+using FluentValidationGenerator.Interfaces;
+using FluentValidationGenerator.Parser;
 
-namespace FluentValidationGenerator.Core;
+namespace FluentValidationGenerator;
 
+/// <summary>
+/// Generator Class used to Generate the Validators for the Commands
+/// </summary>
 public class Generator : IGenerator
 {
 
     public Assembly Assembly { get; }
-    public DirectoryInfo SourceFolder { get; set; }
+    public DirectoryInfo SourceFolder { get; }
 
     /// <summary>
     /// Generator Class used to Generate the Validators for the Commands

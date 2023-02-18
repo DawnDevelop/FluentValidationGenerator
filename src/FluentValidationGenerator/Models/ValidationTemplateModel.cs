@@ -1,6 +1,6 @@
 ﻿using DotLiquid;
 
-namespace FluentValidationGenerator.Core.Models;
+namespace FluentValidationGenerator.Models;
 
 public class ValidationTemplateModel : Drop
 {

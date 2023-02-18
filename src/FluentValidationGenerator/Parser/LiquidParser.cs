@@ -1,9 +1,9 @@
 ﻿using DotLiquid;
 using DotLiquid.FileSystems;
-using FluentValidationGenerator.Core.Utils;
+using FluentValidationGenerator.Utils;
 using System.Reflection;
 
-namespace FluentValidationGenerator.Core.Parser;
+namespace FluentValidationGenerator.Parser;
 
 public static class LiquidParser
 {

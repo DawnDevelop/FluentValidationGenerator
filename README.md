@@ -1,6 +1,6 @@
 # FluentValidationGenerator
 
-![Nuget](https://img.shields.io/nuget/v/FluentValidationGenerator.Core.svg?style=plastic)
+![Nuget](https://img.shields.io/nuget/v/FluentValidationGenerator.svg?style=plastic)
 
 
 A Code Generator for automatically generating [FluentValidation](https://github.com/FluentValidation/FluentValidation) Classes for .NET 7+ with predefined Rules.
@@ -22,7 +22,7 @@ The Generator uses [MediatR](https://github.com/jbogard/MediatR) Commands which 
 
 **For Usage please refer to the [Sample Project](/Samples/SampleNET7/)**
 
-`FluentValidationGenerator.Core.Generator` takes the Assembly which contains the Commands and the Solution Folder as Parameters.
+`FluentValidationGenerator.Generator` takes the Assembly which contains the Commands and the Solution Folder as Parameters.
 
 The easiest way to get your Solution Folder should be:
 
@@ -30,7 +30,7 @@ The easiest way to get your Solution Folder should be:
 
 This should result in:
 ```cs
-var generator = new FluentValidationGenerator.Core.Generator(
+var generator = new FluentValidationGenerator.Generator(
 	typeof(CreateWeatherForecastCommand).Assembly,
 	Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()))!);
 

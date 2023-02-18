@@ -1,9 +1,9 @@
-﻿using FluentValidationGenerator.Core.Models;
+﻿using FluentValidationGenerator.Models;
 using MediatR;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
-namespace FluentValidationGenerator.Core.Utils;
+namespace FluentValidationGenerator.Utils;
 
 public static class ReflectionHelper
 {
