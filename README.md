@@ -1,8 +1,8 @@
 # FluentValidationGenerator
 
-![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/FluentValidationGenerator)
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DawnDevelop/FluentValidationGenerator/CI.yml)
-![GitHub](https://img.shields.io/github/license/DawnDevelop/FluentValidationGenerator)
+![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/FluentValidationGenerator?logo=NuGet)
+![Nuget Downloads](https://img.shields.io/nuget/dt/FluentValidationGenerator?label=Nuget%20Downloads&logo=NuGet)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DawnDevelop/FluentValidationGenerator/CI.yml?logo=GitHub)
 
 A Code Generator for automatically generating [FluentValidation](https://github.com/FluentValidation/FluentValidation) Classes for .NET 7+ with predefined Rules.
 
