@@ -7,11 +7,11 @@ public class DeleteWeatherForecastCommandValidator : AbstractValidator<DeleteWea
   public DeleteWeatherForecastCommandValidator()
   {
         
-	RuleFor(t => t.Summaries).NotEmpty().WithMessage("Summaries Can not be Empty"); 
+	RuleFor(t => t.Summaries).NotEmpty().WithMessage("Summaries Can not be Empty");
 
-	RuleFor(t => t.TemperatureC).NotEmpty().WithMessage("TemperatureC Can not be Empty"); 
+	RuleFor(t => t.TemperatureC).NotEmpty().WithMessage("TemperatureC Can not be Empty");
 
-	RuleFor(t => t.TestString).NotEmpty().WithMessage("TestString Can not be Empty"); 
+	RuleFor(t => t.TestString).NotEmpty().WithMessage("TestString Can not be Empty");
 
   }
 }
