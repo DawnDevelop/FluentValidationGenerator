@@ -1,0 +1,14 @@
+﻿using FluentValidation;
+
+namespace {{ NameSpace }};
+
+public class {{ ClassName }}Validator : AbstractValidator<{{ ClassName }}>
+{
+  public {{ ClassName }}Validator()
+  {
+
+    {% for p in Properties %}
+    RuleFor(x => x.{{ p.Name }}).NotEmpty().WithMessage("{{ p.Name }} Can not be Empty");
+    {% endfor %}
+  }
+}
