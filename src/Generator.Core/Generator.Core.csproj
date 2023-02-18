@@ -1,17 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>#
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageId>FluentValidationGenerator.Generator.Core</PackageId>
+		<PackageTags>Documentation AspNetCore NetCore CleanArchitecture CodeGen Fluent Validation Generator MediatR </PackageTags>
+		<NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
+		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
+		<GenerateNuspecDependsOn>$(GenerateNuspecDependsOn);PopulateNuspec</GenerateNuspecDependsOn>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="DotLiquid" Version="2.2.677" />
-    <PackageReference Include="MediatR" Version="12.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="DotLiquid" Version="2.2.677" />
+		<PackageReference Include="MediatR" Version="12.0.0" />
+	</ItemGroup>
+
 	<ItemGroup>
 		<EmbeddedResource Include="Templates\*.liquid" />
 	</ItemGroup>
+
+	<Target Name="PopulateNuspec">
+		<PropertyGroup>
+			<NuspecProperties>
+				id=$(PackageId);
+				authors=$(Authors);
+				configuration=$(Configuration);
+				description=$(PackageDescription);
+				version=$(PackageVersion);
+			</NuspecProperties>
+		</PropertyGroup>
+	</Target>
 </Project>
