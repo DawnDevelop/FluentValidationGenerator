@@ -50,8 +50,10 @@ public static class ReflectionHelper
     /// </summary>
     private static bool IsNullable(PropertyInfo property)
     {
-        return property.PropertyType.IsGenericType
-            && property.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>);
+        var _nullabilityContext = new NullabilityInfoContext();
+        var nullabilityInfo = _nullabilityContext.Create(property);
+        
+        return nullabilityInfo.WriteState is NullabilityState.Nullable;
     }
 
     /// <summary>
