@@ -1,0 +1,9 @@
+mode: Mainline
+branches: {}
+ignore:
+  sha: []
+merge-message-formats: {}
+tag-prefix: '[vV]'
+legacy-semver-padding: 4
+build-metadata-padding: 4
+commits-since-version-source-padding: 4
