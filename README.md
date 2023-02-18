@@ -13,6 +13,8 @@ The Generator uses [MediatR](https://github.com/jbogard/MediatR) Commands which 
 
 :white_check_mark: Create Fluent Validators based on MediatR commands which follow the [Clean Architecture](https://github.com/jasontaylordev/CleanArchitecture)
 
+:x: Tests
+
 :x: Create Fluent Validators for ASP.NET Core API's based on an [OpenAPI specification](https://github.com/OAI/OpenAPI-Specification/)
 
 
