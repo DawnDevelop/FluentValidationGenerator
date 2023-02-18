@@ -1,15 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		
+		<PackageId>FluentValidationGenerator.Generator.Core</PackageId>
+		<PackageTags>Documentation AspNetCore NetCore CleanArchitecture CodeGen Fluent Validation Generator</PackageTags>
+		<NuspecFile>$(MSBuildProjectName).nuspec</NuspecFile>
+		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
+		<GenerateNuspecDependsOn>$(GenerateNuspecDependsOn);PopulateNuspec</GenerateNuspecDependsOn>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="11.5.0" />
-    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
-    <PackageReference Include="MediatR" Version="12.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="11.5.0" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+		<PackageReference Include="MediatR" Version="12.0.0" />
+	</ItemGroup>
+
+	<Target Name="PopulateNuspec">
+		<PropertyGroup>
+			<NuspecProperties>
+				id=$(PackageId);
+				authors=$(Authors);
+				configuration=$(Configuration);
+				description=$(PackageDescription);
+				version=$(PackageVersion);
+			</NuspecProperties>
+		</PropertyGroup>
+	</Target>
 
 </Project>

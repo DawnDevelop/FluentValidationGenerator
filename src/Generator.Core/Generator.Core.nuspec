@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>FleuntValidatorGenerator.Generator.Core</id>
+        <version>$version$</version>
+        <authors>Deniz Joecks</authors>
+        <description>FleuntValidatorGenerator: A Generation Tool that automatically Generates FleuntValidators based on MediatR commands</description>
+        <tags>AspNet CleanArchitecture MediatR Documentation CodeGen CSharp</tags>
+        <projectUrl>https://github.com/DawnDevelop/FluentValidatorGenerator.gitprojectUrl>
+        <license type="expression">MIT</license>
+        <icon>NuGetIcon.png</icon>
+        <repository type="git" url="https://github.com/DawnDevelop/FluentValidatorGenerator.git"/>
+    </metadata>
+</package>
