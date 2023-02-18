@@ -4,7 +4,7 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>#
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<PackageId>FluentValidationGenerator.Generator.Core</PackageId>
 		<PackageTags>Documentation AspNetCore NetCore CleanArchitecture CodeGen Fluent Validation Generator MediatR </PackageTags>
