@@ -4,6 +4,9 @@
 ![Nuget Downloads](https://img.shields.io/nuget/dt/FluentValidationGenerator?label=Nuget%20Downloads&logo=NuGet)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DawnDevelop/FluentValidationGenerator/CI.yml?logo=GitHub)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/67fe51f496ce62eea4a8/maintainability)](https://codeclimate.com/github/DawnDevelop/FluentValidationGenerator/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/67fe51f496ce62eea4a8/test_coverage)](https://codeclimate.com/github/DawnDevelop/FluentValidationGenerator/test_coverage)
+
 A Code Generator for automatically generating [FluentValidation](https://github.com/FluentValidation/FluentValidation) Classes for .NET 7+ with predefined Rules.
 
 The Generator uses [MediatR](https://github.com/jbogard/MediatR) Commands which inherit from the `IRequest<>` interface to automatically Generate Fluent Validator Classes.
