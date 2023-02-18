@@ -13,9 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleNET7.Application", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{24ED18C9-271F-40DA-A448-42B5BD50E0E7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationGenerator.Tests", "tests\FluentValidationGenerator.Core.Tests\FluentValidationGenerator.Tests.csproj", "{8266AA48-2A3A-4FEC-8C65-398BBBF4B25D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationGenerator.Tests", "tests\FluentValidationGenerator.Tests\FluentValidationGenerator.Tests.csproj", "{8266AA48-2A3A-4FEC-8C65-398BBBF4B25D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationGenerator", "src\FluentValidationGenerator.Core\FluentValidationGenerator.csproj", "{191F6E0C-9F2C-4D01-B396-F2E3E469BE26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationGenerator", "src\FluentValidationGenerator\FluentValidationGenerator.csproj", "{191F6E0C-9F2C-4D01-B396-F2E3E469BE26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
