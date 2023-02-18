@@ -10,6 +10,12 @@ public class Generator : IGenerator
     public Assembly Assembly { get; }
     public DirectoryInfo SourceFolder { get; set; }
 
+    /// <summary>
+    /// Generator Class used to Generate the Validators for the Commands
+    /// </summary>
+    /// <param name="assembly">Assembly Containing the MediatR Commands</param>
+    /// <param name="sourceFolder">Solution Folder. Should be able to get it with: 
+    /// Path.GetDirectoryName(Path.GetDirectoryName(Directory.GetCurrentDirectory()))</param>
     public Generator(Assembly assembly, string sourceFolder)
     {
         Assembly = assembly;
@@ -17,6 +23,12 @@ public class Generator : IGenerator
         SourceFolder = new DirectoryInfo(sourceFolder);
     }
 
+    /// <summary>
+    /// Generates the Boilerplate Code for Fluent Validators from Commands inside your Assembly
+    /// </summary>
+    /// <returns>
+    /// Success
+    /// </returns>
     public bool GenerateValidators()
     {
         var parsedTemplates = LiquidParser.ParseLiquidTemplate(Assembly);
