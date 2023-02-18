@@ -9,7 +9,7 @@ public record CreateWeatherForecastCommand : IRequest<IEnumerable<WeatherForecas
 
 	public required int TemperatureC { get; set; }
 
-	public required string TestString { get; set; }
+	public string? NullableString { get; set; }
 
 }
 

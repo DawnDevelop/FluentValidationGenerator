@@ -1,5 +1,4 @@
 ﻿using FluentValidationGenerator.Models;
-using MediatR;
 using System.Reflection;
 using System.Runtime.CompilerServices;
 
@@ -68,6 +67,8 @@ public static class ReflectionHelper
     /// </summary>
     private static bool IsCommand(Type type)
     {
-        return type.GetInterfaces().Where(t => t.Name.Contains(nameof(IRequest))).Any();
+        const string MediatrRequestInterfaceName = "MediatR.IRequest";
+        
+        return type.GetInterfaces().Any(i => i.FullName!.Contains(MediatrRequestInterfaceName));
     }
 }

@@ -19,16 +19,17 @@
 		<RepositoryBranch>main</RepositoryBranch>
 		<DebugType>Embedded</DebugType>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-		
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
 		<Title>FluentValidationGenerator</Title>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/DawnDevelop/FluentValidationGenerator.git</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
+		<SignAssembly>False</SignAssembly>
 	</PropertyGroup>
 	
 	<ItemGroup>
 		<PackageReference Include="DotLiquid" Version="2.2.677" />
-		<PackageReference Include="MediatR" Version="12.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -40,5 +41,20 @@
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	</ItemGroup>
 </Project>
