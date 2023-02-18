@@ -63,3 +63,7 @@ public class CreateWeatherForecastCommandValidator : AbstractValidator<CreateWea
 > The Generator will **NOT** Generate a Rule for Nullable Properties
 
 
+
+<br>
+<a href="https://www.buymeacoffee.com/DawnDevelop"><img src="https://img.buymeacoffee.com/button-api/?text=Coffee :)&emoji=☕&slug=DawnDevelop&button_colour=17a4d3&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=FFDD00" /></a>
+
