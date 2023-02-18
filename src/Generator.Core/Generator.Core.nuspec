@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <metadata>
-		<readme>readme.md</readme>
+	  <readme>readme.md</readme>
         <id>FleuntValidatorGenerator.Generator.Core</id>
         <version>$version$</version>
         <authors>Deniz Joecks</authors>
@@ -9,7 +9,7 @@
         <tags>AspNet CleanArchitecture MediatR Documentation CodeGen CSharp</tags>
         <projectUrl> https://github.com/DawnDevelop/FluentValidatorGenerator.git </projectUrl>
         <license type="expression">MIT</license>
-        <icon>NuGetIcon.png</icon>
+        
         <repository type="git" url="https://github.com/DawnDevelop/FluentValidatorGenerator.git"/>
     </metadata>
 	<files>
