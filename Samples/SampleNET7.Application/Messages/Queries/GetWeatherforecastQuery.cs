@@ -12,7 +12,7 @@ public class GetWeatherforecastQueryHandler : IRequestHandler<GetWeatherforecast
 	{
 			"Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 	};
-	
+
 	public async Task<WeatherForecast> Handle(GetWeatherforecastQuery request, CancellationToken cancellationToken)
 	{
 		return new WeatherForecast

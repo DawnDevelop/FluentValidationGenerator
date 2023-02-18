@@ -17,7 +17,7 @@ public static class ReflectionHelper
 	{
 		var settings = new List<LiquidModelSettings>();
 
-		foreach (var type in  types)
+		foreach (var type in types)
 		{
 			var properties = type.GetProperties();
 
@@ -25,8 +25,9 @@ public static class ReflectionHelper
 			{
 				ClassName = type.Name,
 				NameSpace = type.Namespace!,
-				Properties = properties.Select(p => new PropertySettings() { 
-					Name = p.Name 
+				Properties = properties.Select(p => new PropertySettings()
+				{
+					Name = p.Name
 				}).ToList()
 			});
 		}

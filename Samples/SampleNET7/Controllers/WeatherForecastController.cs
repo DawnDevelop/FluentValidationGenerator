@@ -32,9 +32,9 @@ namespace SampleNET7.Controllers
 		public async Task<ActionResult<IEnumerable<WeatherForecast>>> Create(CreateWeatherForecastCommand command)
 		{
 			command.Summaries ??= Summaries;
-			
+
 			return Ok(await Mediator.Send(command));
-			
+
 		}
 	}
 }
