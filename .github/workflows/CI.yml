@@ -42,7 +42,7 @@ jobs:
     - name: Set version in all AssemblyInfo.cs files
       uses: secondbounce/assemblyinfo-update@v2
       with:
-        version: '$GITVERSION_ASSEMBLYSEMVER'
+        version:  $GITVERSION_ASSEMBLYSEMVER
     
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.5
