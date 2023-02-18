@@ -1,9 +1,8 @@
 ﻿using MediatR;
-using SampleNET7.Application.Common.Models;
 
 namespace SampleNET7.Application.Messages.Commands;
 
-public record DeleteWeatherForecastCommand : IRequest<Unit>
+public record DeleteWeatherForecastCommand : IRequest
 {
 	public required string[] Summaries { get; set; }
 
@@ -14,10 +13,10 @@ public record DeleteWeatherForecastCommand : IRequest<Unit>
 }
 
 
-public class DeleteWeatherForecastCommandHandler : IRequestHandler<DeleteWeatherForecastCommand, Unit>
+public class DeleteWeatherForecastCommandHandler : IRequestHandler<DeleteWeatherForecastCommand>
 {
-    public Task<Unit> Handle(DeleteWeatherForecastCommand request, CancellationToken cancellationToken)
+    public Task Handle(DeleteWeatherForecastCommand request, CancellationToken cancellationToken)
 	{
-		return Task.FromResult(Unit.Value);
+		return Task.CompletedTask;
 	}
 }
