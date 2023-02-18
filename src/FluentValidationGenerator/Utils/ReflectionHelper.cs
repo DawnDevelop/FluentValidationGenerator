@@ -68,7 +68,9 @@ public static class ReflectionHelper
     private static bool IsCommand(Type type)
     {
         const string MediatrRequestInterfaceName = "MediatR.IRequest";
-        
-        return type.GetInterfaces().Any(i => i.FullName!.Contains(MediatrRequestInterfaceName));
+
+        return type.GetInterfaces()
+            .Where(i => i.FullName is not null)
+            .Any(i => i.FullName!.Contains(MediatrRequestInterfaceName));
     }
 }
