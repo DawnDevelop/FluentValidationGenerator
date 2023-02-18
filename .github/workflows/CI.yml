@@ -32,7 +32,10 @@ jobs:
     - name: Determine Version
       id:   gitversion
       uses: gittools/actions/gitversion/execute@v0.9.7
-      
+      with:
+        useConfigFile: true
+        configFilePath: VersionConfig.yml
+        
     - name: Set version in all AssemblyInfo.cs files
       uses: secondbounce/assemblyinfo-update@v2
       with:
