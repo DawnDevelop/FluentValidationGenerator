@@ -16,14 +16,14 @@ public record CreateWeatherForecastCommand : IRequest<IEnumerable<WeatherForecas
 
 public class CreateWeatherForecastCommandHandler : IRequestHandler<CreateWeatherForecastCommand, IEnumerable<WeatherForecast>>
 {
-	public async Task<IEnumerable<WeatherForecast>> Handle(CreateWeatherForecastCommand request, CancellationToken cancellationToken)
+	public Task<IEnumerable<WeatherForecast>> Handle(CreateWeatherForecastCommand request, CancellationToken cancellationToken)
 	{
-		return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+		return Task.FromResult(Enumerable.Range(1, 5).Select(index => new WeatherForecast
 		{
 			Date = DateTime.Now,
 			TemperatureC = request.TemperatureC,
 			Summary = request.Summaries[Random.Shared.Next(request.Summaries.Length)]
 		})
-		.AsEnumerable();
+		.AsEnumerable());
 	}
 }

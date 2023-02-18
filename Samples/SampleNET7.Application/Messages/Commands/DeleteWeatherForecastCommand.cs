@@ -16,8 +16,8 @@ public record DeleteWeatherForecastCommand : IRequest<Unit>
 
 public class DeleteWeatherForecastCommandHandler : IRequestHandler<DeleteWeatherForecastCommand, Unit>
 {
-    public async Task<Unit> Handle(DeleteWeatherForecastCommand request, CancellationToken cancellationToken)
+    public Task<Unit> Handle(DeleteWeatherForecastCommand request, CancellationToken cancellationToken)
 	{
-		return Unit.Value;
+		return Task.FromResult(Unit.Value);
 	}
 }

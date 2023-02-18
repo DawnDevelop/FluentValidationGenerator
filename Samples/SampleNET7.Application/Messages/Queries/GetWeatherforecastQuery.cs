@@ -13,13 +13,13 @@ public class GetWeatherforecastQueryHandler : IRequestHandler<GetWeatherforecast
 			"Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 	};
 
-	public async Task<WeatherForecast> Handle(GetWeatherforecastQuery request, CancellationToken cancellationToken)
+	public Task<WeatherForecast> Handle(GetWeatherforecastQuery request, CancellationToken cancellationToken)
 	{
-		return new WeatherForecast
+		return Task.FromResult(new WeatherForecast
 		{
 			Date = DateTime.Now,
 			TemperatureC = Random.Shared.Next(-20, 55),
 			Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-		};
+		});
 	}
 }
