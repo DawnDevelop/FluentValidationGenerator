@@ -1,4 +1,4 @@
-using FluentAssertions;
+﻿using FluentAssertions;
 using FluentValidationGenerator.Tests.Commands;
 using Moq;
 using NUnit.Framework;
