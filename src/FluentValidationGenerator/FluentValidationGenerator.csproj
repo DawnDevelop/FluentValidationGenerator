@@ -8,7 +8,7 @@
 		
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Description>FluentValidatorGenerator: A Code Generation Tool that automatically Generates FleuntValidators based on MediatR commands</Description>
-    <Owners>Deniz Joecks</Owners>
+		<Owners>Deniz Joecks</Owners>
 		<Authors>Deniz Joecks</Authors>
 		<PackageId>FluentValidationGenerator</PackageId>
 		<PackageTags>Documentation AspNetCore NetCore CleanArchitecture CodeGen Fluent Validation Generator MediatR </PackageTags>
@@ -27,10 +27,13 @@
 		<RepositoryUrl>https://github.com/DawnDevelop/FluentValidationGenerator.git</RepositoryUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<EnforceCodeStyleInBuild>False</EnforceCodeStyleInBuild>
-		<SignAssembly>False</SignAssembly>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	</PropertyGroup>
+	
+	<PropertyGroup Condition="'$(TF_BUILD)' == 'true'">
 		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
 	</PropertyGroup>
 	
