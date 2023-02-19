@@ -101,8 +101,8 @@ jobs:
       
     - name: Publish NuGet
       if: startsWith(github.ref, 'refs/heads/release')
-      run: nuget push **/*.nupkg;!**/*.symbols.nupkg -Source 'https://api.nuget.org/v3/index.json' -SkipDuplicate -ApiKey ${{secrets.NUGET_API_KEY}}
+      run: nuget push "**/*.nupkg" -Source 'https://api.nuget.org/v3/index.json' -SkipDuplicate -ApiKey ${{secrets.NUGET_API_KEY}}
 
     - name: Publish Symbols
       if: startsWith(github.ref, 'refs/heads/release')
-      run: nuget push **/*.symbols.nupkg;!**/*.nupkg
+      run: nuget push "**/*.symbols.nupkg"
