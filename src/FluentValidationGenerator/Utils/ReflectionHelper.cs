@@ -46,14 +46,16 @@ public static class ReflectionHelper
     }
 
     /// <summary>
-    /// Check whether or not the Property is declared Nullable
+    /// Check whether or not the Property should receive the NotEmpty() Method
     /// </summary>
     private static bool IsNullable(PropertyInfo property)
     {
         var _nullabilityContext = new NullabilityInfoContext();
         var nullabilityInfo = _nullabilityContext.Create(property);
-        
-        return nullabilityInfo.WriteState is NullabilityState.Nullable;
+
+        // Note: "IsClass" check is including all reference Types 
+        return nullabilityInfo.WriteState is NullabilityState.Nullable 
+            || (!property.PropertyType.IsClass && property.PropertyType.IsValueType);
     }
 
     /// <summary>

@@ -7,7 +7,7 @@ public class GetWeatherforecastQueryValidator : AbstractValidator<GetWeatherfore
   public GetWeatherforecastQueryValidator()
   {
         
-	RuleFor(t => t.TemperatureC).NotEmpty().WithMessage("TemperatureC Can not be Empty");
+	RuleFor(t => t.TemperatureC);
 
   }
 }

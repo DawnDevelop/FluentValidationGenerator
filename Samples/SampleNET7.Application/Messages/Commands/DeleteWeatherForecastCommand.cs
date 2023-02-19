@@ -6,7 +6,7 @@ public record DeleteWeatherForecastCommand : IRequest
 {
 	public required string[] Summaries { get; set; }
 
-	public required int TemperatureC { get; set; }
+	public required string TemperatureC { get; set; }
 
 	public required string TestString { get; set; }
 
