@@ -12,11 +12,11 @@ public static class LiquidParser
 
 
     /// <summary>
-    /// Parses the Liquid Template
+    /// Parses All Liquid Templates
     /// </summary>
     /// <param name="assembly">Assembly Containing the MediatR Commands</param>
-    /// <returns>Dictionary which contains the Command Name as a key and the Rendered Template</returns>
-    public static Dictionary<string, string> ParseLiquidTemplate(Assembly assembly)
+    /// <returns>Dictionary which contains the Command Name as a key and the Rendered Template as Value</returns>
+    public static Dictionary<string, string> ParseAllTemplatesFromAssembly(Assembly assembly)
     {
 
         var source = GetEmbeddedTemplate();
@@ -45,7 +45,7 @@ public static class LiquidParser
     /// Gets the Embedded Main Template (Validation.Class.liquid) from the Embedded resources.
     /// </summary>
     /// <returns>Returns the raw string of the template</returns>
-    private static string GetEmbeddedTemplate()
+    internal static string GetEmbeddedTemplate()
     {
         var assembly = typeof(LiquidParser).Assembly;
         var root = $"{assembly.GetName().Name}.{TemplateFolder}";

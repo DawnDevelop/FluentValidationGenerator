@@ -34,7 +34,7 @@ public class Generator : IGenerator
     /// </returns>
     public bool GenerateValidators()
     {
-        var parsedTemplates = LiquidParser.ParseLiquidTemplate(Assembly);
+        var parsedTemplates = LiquidParser.ParseAllTemplatesFromAssembly(Assembly);
 
         foreach (var item in parsedTemplates)
         {
