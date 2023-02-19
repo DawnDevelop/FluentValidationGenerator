@@ -99,6 +99,10 @@ jobs:
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
   
+    - name: Pack
+      if: startsWith(github.ref, 'refs/heads/release')
+      run: nuget **\FluentValidationGenerator.csproj pack -Symbols -SymbolPackageFormat snupkg
+      
     - name: Publish
       if: startsWith(github.ref, 'refs/heads/release')
-      run: nuget push **\*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
+      run: nuget push **\*.nupkg;-:**\*.symbols.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
