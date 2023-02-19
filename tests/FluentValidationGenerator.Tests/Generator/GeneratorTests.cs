@@ -1,4 +1,4 @@
-﻿using FluentAssertions;
+using FluentAssertions;
 using FluentValidationGenerator.Tests.Commands;
 using Moq;
 using NUnit.Framework;
@@ -12,6 +12,7 @@ public class GeneratorTests : BaseTest
 {
     public static string GeneratorTestsDirectory => ProjectDirectory + "\\Generator";
     public static string fileName => $"{GeneratorTestsDirectory}\\Commands\\{nameof(GeneratorTestCommand)}Validator.cs";
+
     
     //TODO
 
