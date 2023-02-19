@@ -5,7 +5,7 @@
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DawnDevelop/FluentValidationGenerator/CI.yml?logo=GitHub)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/67fe51f496ce62eea4a8/maintainability)](https://codeclimate.com/github/DawnDevelop/FluentValidationGenerator/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/67fe51f496ce62eea4a8/test_coverage)](https://codeclimate.com/github/DawnDevelop/FluentValidationGenerator/test_coverage)
+[![codecov](https://codecov.io/gh/DawnDevelop/FluentValidationGenerator/branch/main/graph/badge.svg?token=C2BAZP1HAY)](https://codecov.io/gh/DawnDevelop/FluentValidationGenerator)
 
 A Code Generator for automatically generating [FluentValidation](https://github.com/FluentValidation/FluentValidation) Classes for .NET 7+ with predefined Rules.
 
