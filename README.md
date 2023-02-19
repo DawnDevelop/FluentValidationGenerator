@@ -24,7 +24,7 @@ The Generator uses [MediatR](https://github.com/jbogard/MediatR) Commands which 
 
 ## Usage
 
-**For Usage please refer to the [Sample Project](/Samples/SampleNET7/)**
+**For Usage please refer to the [Sample Project](/Samples/)**
 
 `FluentValidationGenerator.Generator` takes the Assembly which contains the Commands and the Solution Folder as Parameters.
 
@@ -66,7 +66,9 @@ public class CreateWeatherForecastCommandValidator : AbstractValidator<CreateWea
 > The Generator will **NOT** Generate a Rule for Nullable Properties
 
 
-
 <br>
+
+[Medium publication](https://medium.com/@denizjoecks/automatically-generate-fluent-validation-classes-for-your-net-projects-based-on-mediatr-commands-94c3b3ec19d3)
+
 <a href="https://www.buymeacoffee.com/DawnDevelop"><img src="https://img.buymeacoffee.com/button-api/?text=Coffee :)&emoji=☕&slug=DawnDevelop&button_colour=17a4d3&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
