@@ -1,7 +1,7 @@
 # FluentValidationGenerator
 
-![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/FluentValidationGenerator?logo=NuGet)
-![Nuget Downloads](https://img.shields.io/nuget/dt/FluentValidationGenerator?label=Nuget%20Downloads&logo=NuGet)
+[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/FluentValidationGenerator?logo=NuGet)](https://www.nuget.org/packages/FluentValidationGenerator/)
+[![Nuget Downloads](https://img.shields.io/nuget/dt/FluentValidationGenerator?label=Nuget%20Downloads&logo=NuGet)](https://www.nuget.org/packages/FluentValidationGenerator/)
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/DawnDevelop/FluentValidationGenerator/CI.yml?logo=GitHub)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/67fe51f496ce62eea4a8/maintainability)](https://codeclimate.com/github/DawnDevelop/FluentValidationGenerator/maintainability)
