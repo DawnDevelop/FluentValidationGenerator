@@ -8,7 +8,7 @@
 		
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Description>FluentValidatorGenerator: A Code Generation Tool that automatically Generates FleuntValidators based on MediatR commands</Description>
-
+    <Owners>Deniz Joecks</Owners>
 		<Authors>Deniz Joecks</Authors>
 		<PackageId>FluentValidationGenerator</PackageId>
 		<PackageTags>Documentation AspNetCore NetCore CleanArchitecture CodeGen Fluent Validation Generator MediatR </PackageTags>
@@ -18,7 +18,7 @@
 		<RepositoryType>git</RepositoryType>
 		<RepositoryBranch>main</RepositoryBranch>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<IncludeSymbols>true</IncludeSymbols>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<DebugType>Embedded</DebugType>
