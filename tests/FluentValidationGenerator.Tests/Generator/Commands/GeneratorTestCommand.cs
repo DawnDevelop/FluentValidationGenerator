@@ -4,7 +4,9 @@ namespace FluentValidationGenerator.Tests.Commands;
 
 public class GeneratorTestCommand : IRequest
 {
-    public string? PropertyName { get; set; }
+    public string? NullableString { get; set; }
     public int TestInteger { get; set; }
 
+    public required string NotNullableString { get; set; }
+    
 }

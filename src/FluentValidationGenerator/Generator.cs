@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.IO;
+using System.Reflection;
 using FluentValidationGenerator.Interfaces;
 using FluentValidationGenerator.Parser;
 
@@ -26,28 +27,65 @@ public class Generator : IGenerator
         SourceFolder = new DirectoryInfo(sourceFolder);
     }
 
-    /// <summary>
-    /// Generates the Boilerplate Code for Fluent Validators from Commands inside your Assembly
-    /// </summary>
-    /// <returns>
-    /// Success
-    /// </returns>
-    public bool GenerateValidators()
-    {
-        var parsedTemplates = LiquidParser.ParseAllTemplatesFromAssembly(Assembly);
 
+
+    /// <summary>
+    /// Generates the Validators for the Commands and Queries in the Assembly
+    /// </summary>
+    /// <param name="overWriteOutputFolderPath"> 
+    /// Custom folder to output the Validators. 
+    /// If blank, the Validators are attempted to be generated inside the same folder as the Commands and Queries
+    /// </param>
+    /// <returns>Success</returns>
+    public bool GenerateValidators(string? overWriteOutputFolderPath = null)
+    {
+        try
+        {
+            var parsedTemplates = LiquidParser.ParseAllTemplatesFromAssembly(Assembly);
+
+            if (!string.IsNullOrWhiteSpace(overWriteOutputFolderPath))
+                OutputInCustomFolder(parsedTemplates, overWriteOutputFolderPath);
+            else
+                OutputInValidationFolder(parsedTemplates);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Something went wrong: {0}", ex.Message);
+            return false;
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// Outputs all Classes in a single folder
+    /// </summary>
+    private static void OutputInCustomFolder(
+        Dictionary<string, string> parsedTemplates, string overWriteOutputFolderPath)
+    {
+        Directory.CreateDirectory(overWriteOutputFolderPath);
+        foreach (var item in parsedTemplates)
+        {
+            File.WriteAllText(overWriteOutputFolderPath + "\\" + item.Key + "Validator.cs", item.Value);
+        }
+
+    }
+
+    /// <summary>
+    /// Outputs all Classes inside the corresponding Command or Query Folders
+    /// </summary>
+    private void OutputInValidationFolder(Dictionary<string, string> parsedTemplates)
+    {
         foreach (var item in parsedTemplates)
         {
             foreach (var file in
                 Directory.EnumerateFiles(SourceFolder.FullName, "*.cs", SearchOption.AllDirectories)
                 .Where(file => file.EndsWith($"{item.Key}.cs")))
             {
-                var newName = file.Replace($"{item.Key}.cs", $"{item.Key}Validator.cs");
+                string newName = file.Replace($"{item.Key}.cs", $"{item.Key}Validator.cs");
                 File.WriteAllText(newName, item.Value);
             }
         }
-
-        return true;
     }
 
 }

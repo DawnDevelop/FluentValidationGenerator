@@ -6,5 +6,5 @@ public interface IGenerator
     /// Generates the Validators for the Commands in the Assembly
     /// </summary>
     /// <returns>Success</returns>
-    bool GenerateValidators();
+    bool GenerateValidators(string overWriteOutputFolderPath = null!);
 }

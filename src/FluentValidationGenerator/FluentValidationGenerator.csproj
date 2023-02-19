@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<AssemblyName>FluentValidationGenerator</AssemblyName>
 		<Nullable>enable</Nullable>
-		
+		<LangVersion>latest</LangVersion>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Description>FluentValidatorGenerator: A Code Generation Tool that automatically Generates FleuntValidators based on MediatR commands</Description>
 		<Owners>Deniz Joecks</Owners>
@@ -21,6 +21,8 @@
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 		<IncludeSymbols>true</IncludeSymbols>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<DebugSymbols>True</DebugSymbols>
+		<EmbedAllSources>True</EmbedAllSources>
 		<DebugType>Embedded</DebugType>
 		<Title>FluentValidationGenerator</Title>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
