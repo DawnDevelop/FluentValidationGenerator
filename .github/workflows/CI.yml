@@ -44,8 +44,9 @@ jobs:
       with:
         version: "${{ steps.gitversion.outputs.assemblySemVer }}"
     
-    - name: Setup NuGet
-      uses: NuGet/setup-nuget@v1.0.5
+    - uses: nuget/setup-nuget@v1
+      with:
+        nuget-api-key: ${{secrets.NUGET_API_KEY}}
 
     - name: Restore dependencies
       run: nuget restore $SOLUTION
@@ -66,4 +67,4 @@ jobs:
   
     - name: Publish
       if: startsWith(github.ref, 'refs/heads/release')
-      run: nuget push **/*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey ${{secrets.NUGET_API_KEY}}
+      run: nuget push **/*.nupkg -Source 'https://api.nuget.org/v3/index.json' -ApiKey 
