@@ -41,7 +41,23 @@ var generator = new FluentValidationGenerator.Generator(
 generator.GenerateValidators();
 ```
 
-The Generator should generate a File looking similar to the following Code, depending on the amount of Parameters
+Having defined Commands or Queries like the following:
+```cs
+public record CreateWeatherForecastCommand : IRequest<IEnumerable<WeatherForecast>>
+{
+    public required string[] Summaries { get; set; }
+
+    public int TemperatureC { get; set; }
+
+    public string? NullableString { get; set; }
+
+    public required string NotNullableString { get; set; }
+
+}
+```
+
+Should generate a File looking similar to the following Code, depending on the amount of Parameters
+
 ```cs
 using FluentValidation;
 
@@ -52,19 +68,20 @@ public class CreateWeatherForecastCommandValidator : AbstractValidator<CreateWea
   public CreateWeatherForecastCommandValidator()
   {
         
-	RuleFor(t => t.Summaries).NotEmpty().WithMessage("Summaries Can not be Empty"); 
+	RuleFor(t => t.Summaries).NotEmpty().WithMessage("Summaries Can not be Empty");
 
-	RuleFor(t => t.TemperatureC).NotEmpty().WithMessage("TemperatureC Can not be Empty"); 
+	RuleFor(t => t.TemperatureC);
 
-	RuleFor(t => t.TestString).NotEmpty().WithMessage("TestString Can not be Empty"); 
+	RuleFor(t => t.NullableString);
+
+	RuleFor(t => t.NotNullableString).NotEmpty().WithMessage("NotNullableString Can not be Empty");
 
   }
 }
 
 ```
 
-> The Generator will **NOT** Generate a Rule for Nullable Properties
-
+> The Generator will Generate an **empty** Rule for Nullable Properties or Value Types
 
 <br>
 
