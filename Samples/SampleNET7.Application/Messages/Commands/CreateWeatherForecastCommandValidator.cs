@@ -7,11 +7,13 @@ public class CreateWeatherForecastCommandValidator : AbstractValidator<CreateWea
   public CreateWeatherForecastCommandValidator()
   {
         
-	RuleFor(t => t.Summaries).NotEmpty().WithMessage("Summaries Can not be Empty");
+	RuleFor(t => t.Summaries).NotEmpty().WithMessage("Summaries can not be Empty");
 
 	RuleFor(t => t.TemperatureC);
 
 	RuleFor(t => t.NullableString);
+
+	RuleFor(t => t.NotNullableString).NotEmpty().WithMessage("NotNullableString can not be Empty");
 
   }
 }

@@ -11,6 +11,8 @@ public record CreateWeatherForecastCommand : IRequest<IEnumerable<WeatherForecas
 
 	public string? NullableString { get; set; }
 
+    public required string NotNullableString { get; set; }
+
 }
 
 
