@@ -14,6 +14,18 @@ public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TReque
 		_validators = validators;
 	}
 
+ /// <summary>
+ /// Handles the validation for a given request and proceeds to the next handler if validation succeeds.
+ /// </summary>
+ /// <param name="request">The request instance to validate.</param>
+ /// <param name="next">The delegate to execute the next handler.</param>
+ /// <param name="cancellationToken">The cancellation token to observe while waiting for the task to complete.</param>
+ /// <returns>The response from the next handler.</returns>
+ /// <exception cref="ValidationException">Thrown when one or more validation failures occur.</exception>
+ /// <example>
+ /// var response = await handleInstance.Handle(request, nextHandler, cancellationToken);
+ /// Console.WriteLine(response); // The expected response if validation passes.
+ /// </example>
 	public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
 	{
 		if (_validators.Any())
